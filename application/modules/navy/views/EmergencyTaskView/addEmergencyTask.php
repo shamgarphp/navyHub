@@ -43,6 +43,11 @@
                 <option value="">Select Location</option>
               </select>
           </div>
+           <div class="form-group col-sm-5">
+            <label for="username">U-Name
+            </label>
+              <input type="text" class="form-control m-input m-input--air"  name="uname"  id="uname"  placeholder="U-Name">
+          </div>
           <div class="form-group col-sm-5">
             <label for="username">Task
             </label>

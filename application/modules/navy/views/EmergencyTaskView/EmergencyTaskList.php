@@ -38,12 +38,14 @@
                   <th>Area</th>
                   <th>Location</th>
                   <th>Task</th>
+                  <th>U-Name</th>
                   <th>ET-ID</th>
                   <th>Description</th>
                   <th>Date And Time</th>
                   <th>Expected Time</th>
                   <th>Time For Micro Ron</th>
                   <th>Time For 10M</th>
+                  <th>Expected Dose</th>
                   <th>Actions</th>
                   
   
@@ -64,14 +66,19 @@
 
                   <td> <?php echo $i++; ?> </td>
                   <td><?php if(!empty($emergencyTask['area'])) { echo ucfirst($emergencyTask['area']); } else { echo '---'; }?></td>
+                  <td><?php if(!empty($emergencyTask['location'])) { echo $emergencyTask['location']; } else { echo '---'; }?></td>
+                    
                   <td><?php if(!empty($emergencyTask['task'])) { echo ucfirst($emergencyTask['task']); } else { echo '---'; }?></td>
-                   <td><?php if(!empty($emergencyTask['location'])) { echo $emergencyTask['location']; } else { echo '---'; }?></td>
+                  <td><?php if(!empty($emergencyTask['uname'])) { echo ucfirst($emergencyTask['uname']); } else { echo '---'; }?></td>
+                   
                    <td><?php if(!empty($emergencyTask['et_id'])) { echo $emergencyTask['et_id']; } else { echo '---'; }?></td>
                   <td><?php if(!empty($emergencyTask['dispution']) && !empty($emergencyTask['dispution'])) { echo $emergencyTask['dispution']; } else { echo '---'; }?></td>
                   <td><?php if(!empty($emergencyTask['date_time']) && !empty($emergencyTask['date_time'])) { echo $emergencyTask['date_time']; } else { echo '---'; }?></td>
                   <td><?php if(!empty($emergencyTask['expection_time']) && !empty($emergencyTask['expection_time'])) { echo $emergencyTask['expection_time']; } else { echo '---'; }?></td>
                   <td><?php if(!empty($emergencyTask['time_for_micro'])) { echo ucfirst($emergencyTask['time_for_micro']); } else { echo '---'; }?></td>
                   <td><?php if(!empty($emergencyTask['time_10m'])) { echo ucfirst($emergencyTask['time_10m']); } else { echo '---'; }?></td>
+                  <td>
+                     <td><?php if(!empty($emergencyTask['expected_dose'])) { echo ucfirst($emergencyTask['expected_dose']); } else { echo '---'; }?></td>
                   <td>
                     <div class="btn-group">
                       <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Actions

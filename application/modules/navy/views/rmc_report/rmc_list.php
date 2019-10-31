@@ -35,10 +35,16 @@
                   </th>
                   <th>S.no</th>
                   <th>Date&Time</th>
+                  <th>Area</th>
                   <th>Location</th>
+                  <th>U-name</th>
+                  <th>RMG</th>
                   <th>Latitude</th>
                   <th>Longitude</th>
-                  <th>Radiation_level</th>
+                  <th>RT-Type</th>
+                  <th>Channel No</th>
+                  <th>Radiation Level</th>
+                  <th>Unit</th>
                   <th>Actions</th>
                   
   
@@ -59,13 +65,17 @@
 
                   <td> <?php echo $i++; ?> </td>
                   <td><?php if(!empty($rmc['dtandtm'])) { echo ucfirst($rmc['dtandtm']); } else { echo '---'; }?></td>
-                   <td><?php if(!empty($rmc['Location'])) { echo $rmc['Location']; } else { echo '---'; }?></td>
-                  <td><?php if(!empty($rmc['Latitude']) && !empty($rmc['Latitude'])) { echo $rmc['Latitude']; } else { echo '---'; }?></td>
-                  <td><?php if(!empty($rmc['Longitude'])) { echo ucfirst($rmc['Longitude']); } else { echo '---'; }?></td>
-                  <td><?php if(!empty($rmc['Radiation_level'])) { echo ucfirst($rmc['Radiation_level']); } else { echo '---'; }?></td>
+                   <td><?php if(!empty($rmc['area'])) { echo $rmc['area']; } else { echo '---'; }?></td>
+                  <td><?php if(!empty($rmc['location']) && !empty($rmc['location'])) { echo $rmc['location']; } else { echo '---'; }?></td>
+                  <td><?php if(!empty($rmc['uname'])) { echo ucfirst($rmc['uname']); } else { echo '---'; }?></td>
+                  <td><?php if(!empty($rmc['rmg'])) { echo ucfirst($rmc['rmg']); } else { echo '---'; }?></td>
+                  <td><?php if(!empty($rmc['latitude'])) { echo ucfirst($rmc['latitude']); } else { echo '---'; }?></td>
+                  <td><?php if(!empty($rmc['longitude'])) { echo ucfirst($rmc['longitude']); } else { echo '---'; }?></td>
+                  <td><?php if(!empty($rmc['rtype'])) { echo ucfirst($rmc['rtype']); } else { echo '---'; }?></td>
+                  <td><?php if(!empty($rmc['channel_no'])) { echo ucfirst($rmc['channel_no']); } else { echo '---'; }?></td>
+                  <td><?php if(!empty($rmc['radiation_level'])) { echo ucfirst($rmc['radiation_level']); } else { echo '---'; }?></td>
+                  <td><?php if(!empty($rmc['unit'])) { echo ucfirst($rmc['unit']); } else { echo '---'; }?></td>
                    
-        
-                
                   <td>
                     <div class="btn-group">
                       <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Actions

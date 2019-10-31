@@ -6,7 +6,7 @@ class Sub_Marine_Model extends CI_Model
     private $smrs =  "smrs";
     private $pstates =  "p_state";
     private $cstates =  "checkoff_gps";
-    private $rmcReport =  "rmc_report";
+    private $rmcReport =  "rmg";
     private $waterorboatReport =  "waterorboat_report";
     private $esvReport =  "esv";
     private $weatherStation =  "weather_station";

@@ -32,10 +32,18 @@
                   </th>
                   <th>S.no</th>
                   <th>Date&Time</th>
-                  <th>Compartment</th>
+                  <th>U-Name</th>
+                  <th>Area</th>
+                  <th>Location</th>
+                  <th>RGMS Channel</th>
+                  <th>Rad Type</th>
+                  <th>Radiation Level(c)</th>
+                  <th>Unit</th>
+                  <th>Radsit</th>
+                  <!-- <th>Compartment</th>
                   <th>RGMS Channel</th>
                   <th>Radiation Level(c)</th>
-                  <th>Radsit</th>
+                  <th>Radsit</th> -->
                   <th>Actions</th>
 
                 </tr>
@@ -56,9 +64,13 @@
 
                   <td> <?php echo $i++; ?> </td>
                   <td><?php if(!empty($smrs['dtntm'])) { echo ucfirst($smrs['dtntm']); } else { echo '---'; }?></td>
-                  <td><?php if(!empty($smrs['compartment']) && !empty($smrs['compartment'])) { echo $smrs['compartment']; } else { echo '---'; }?></td>
+                  <td><?php if(!empty($smrs['uname']) && !empty($smrs['uname'])) { echo $smrs['uname']; } else { echo '---'; }?></td>
+                  <td><?php if(!empty($smrs['area'])) { echo ucfirst($smrs['area']); } else { echo '---'; }?></td>
+                  <td><?php if(!empty($smrs['location'])) { echo ucfirst($smrs['location']); } else { echo '---'; }?></td>
                   <td><?php if(!empty($smrs['rgms_channel'])) { echo ucfirst($smrs['rgms_channel']); } else { echo '---'; }?></td>
+                  <td><?php if(!empty($smrs['rad_type'])) { echo ucfirst($smrs['rad_type']); } else { echo '---'; }?></td>
                   <td><?php if(!empty($smrs['radiation_level'])) { echo ucfirst($smrs['radiation_level']); } else { echo '---'; }?></td>
+                  <td><?php if(!empty($smrs['unit'])) { echo ucfirst($smrs['unit']); } else { echo '---'; }?></td>
                   <td><?php if(!empty($smrs['radsit'])) { echo $smrs['radsit']; } else { echo '---'; }?></td>
                   
 

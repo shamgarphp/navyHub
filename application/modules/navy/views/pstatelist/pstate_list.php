@@ -36,9 +36,9 @@
                   <th>S.no</th>
                   <th>Date&Time</th>
                   <th>Area</th>
-                  <th>Compartment</th>
-                  <th>Location</th>
                   
+                  <th>Location</th>
+                  <th>U-Name</th>
                   <th>Number of Personnel</th>
                   <th>Actions</th>
   
@@ -60,8 +60,9 @@
                   <td> <?php echo $i++; ?> </td>
                   <td><?php if(!empty($PstateList['dtntm'])) { echo ucfirst($PstateList['dtntm']); } else { echo '---'; }?></td>
                    <td><?php if(!empty($PstateList['area'])) { echo $PstateList['area']; } else { echo '---'; }?></td>
-                  <td><?php if(!empty($PstateList['compartment']) && !empty($PstateList['compartment'])) { echo $PstateList['compartment']; } else { echo '---'; }?></td>
+                  
                   <td><?php if(!empty($PstateList['location'])) { echo ucfirst($PstateList['location']); } else { echo '---'; }?></td>
+                  <td><?php if(!empty($PstateList['uname']) && !empty($PstateList['uname'])) { echo $PstateList['uname']; } else { echo '---'; }?></td>
                   <td><?php if(!empty($PstateList['num_p'])) { echo ucfirst($PstateList['num_p']); } else { echo '---'; }?></td>
                  
         

@@ -35,6 +35,7 @@
                   </th>
                   <th>S.no</th>
                   <th>Date&Time</th>
+                   <th>U-Name</th>
                   <th>Power</th>
                   <th>Pressure kg/cm2</th>
                   <th>Temperature(c)</th>
@@ -67,6 +68,7 @@
 
                   <td> <?php echo $i++; ?> </td>
                   <td><?php if(!empty($customer['dtntm'])) { echo ucfirst($customer['dtntm']); } else { echo '---'; }?></td>
+                  <td><?php if(!empty($customer['uname'])) { echo ucfirst($customer['uname']); } else { echo '---'; }?></td>
                   <td><?php if(!empty($customer['power']) && !empty($customer['power'])) { echo $customer['power']; } else { echo '---'; }?></td>
                   <td><?php if(!empty($customer['pressurekgcm'])) { echo ucfirst($customer['pressurekgcm']); } else { echo '---'; }?></td>
                   <td><?php if(!empty($customer['temparaturec'])) { echo ucfirst($customer['temparaturec']); } else { echo '---'; }?></td>

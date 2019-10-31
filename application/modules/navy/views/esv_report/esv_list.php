@@ -35,7 +35,7 @@
                   </th>
                   <th>S.no</th>
                   <th>Date&Time</th>
-                  <th>Name</th>
+                  <th>U-Name</th>
                   <th>Area</th>
                   <th>Location</th>
                   <th>Latitude</th>

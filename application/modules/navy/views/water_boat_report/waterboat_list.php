@@ -40,8 +40,6 @@
                   <th>Longitude</th>
                   <th>Radiation_level</th>
                   <th>Actions</th>
-                  
-  
                 </tr>
               </thead>
               <tbody>

@@ -35,7 +35,7 @@
                   </th>
                   <th>S.no</th>
                   <th>Date&Time</th>
-                  <th>Namw</th>
+                  <th>Name</th>
                   <th>Information</th>
                   <th>Location</th>
                   <th>Latitude</th>

@@ -35,6 +35,11 @@
                          <input type="text" class="form-control m-input m-input--air"  name="task"  id="task"  placeholder="Task " value="<?php echo ucfirst($emergencyTask['task'])?>">
                       </div>
 
+                       <div class="col-md-5">
+                        <h5>U-Name</h5>
+                         <input type="text" class="form-control m-input m-input--air"  name="uname"  id="uname"  placeholder="U-Name " value="<?php echo ucfirst($emergencyTask['uname'])?>">
+                      </div>
+
 
                       <div class="col-md-5">
                         <h5>Description</h5>
