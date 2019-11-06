@@ -95,7 +95,32 @@
       <div class="form-actions">
         <button type="submit" class="btn btn-accent" name="add_user" id="add_user" value="add_user">Update</button>
         <button type="reset" class="btn btn-secondary reset" id="cancelBtn" style="background-color: lightgray;">Cancel</button>
-      </div>
+      </div><br>
+      <h4>Team Members</h4>
+      <table class="table table-striped table-bordered table-hover table-checkable">
+        <thead>
+            <tr>
+              <th>Sno</th>
+              <th>Member Name</th>
+              <th>Dose History</th>
+            </tr>
+        </thead>
+        <tbody>
+          <?php $sno = 1;
+          if(sizeof($memberList)){
+          foreach($memberList as $value){?>
+          <tr>
+            <td><?php echo $sno; ?></td>
+            <td><?php echo $value['name']; ?></td>
+            <td><?php echo $value['dose_history']; ?></td>
+          </tr>
+          <?php $sno++; } }else{?>
+            <tr>
+              <td colspan="3">No records found</td>
+            </tr>
+          <?php } ?>
+        </tbody>        
+      </table>
   </form>
 </div>
 </div>

@@ -108,6 +108,7 @@ class EmergencyTeam extends MX_Controller
       $emtId = $_GET['emtId'];
       $data['doseHistoryObj']   =  $this->DoseHistoryModel->getDoseHistoryObjList();
       $data['emergencyObj'] =  $this->EmergencyTeamModel->getEmergencyTeamById($emtId);
+      $data['memberList'] =  $this->EmergencyTeamModel->getMembersByTeamId($emtId);
       $data['file']        = 'navy/EmergencyTeamView/editEmergencyTeamView';
       $data['validation_js']  = 'admin/all_common_js/frontend_validation_js';
       $this->load->view('admin_template/main',$data);

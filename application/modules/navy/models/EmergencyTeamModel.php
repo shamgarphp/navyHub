@@ -84,6 +84,22 @@ class EmergencyTeamModel extends CI_Model
             return FALSE;
         }
     }
+    public function getMembersByTeamId($emtId){
+
+        $this->db->select('*');
+        $this->db->from('dose_history dh');
+        $this->db->where('dh.et_id', $emtId);
+       
+        $query = $this->db->get();
+        if ($query->num_rows() > 0) 
+        {
+            return $query->result_array();
+        }
+        else
+        {
+            return FALSE;
+        }
+    }
 
     public function updateEmergencyTeam($emtId){
 
@@ -97,6 +113,19 @@ class EmergencyTeamModel extends CI_Model
 
         $this->db->where('id', $emtId);
         $update = $this->db->update('emergency_team', $data);
+
+        $count_day = count($this->input->post('member'));
+
+        for($x = 0; $x < $count_day; $x++) {
+            
+            $updateTeam = $this->getTeamIdByMemberIds($this->input->post('member')[$x]);
+            $memId = $updateTeam['id'];
+
+            $this->db->set('et_id',$emtId);
+            $this->db->where('id',$memId);
+            $this->db->update('dose_history');
+            
+        }
        
     }
 
@@ -128,21 +157,16 @@ class EmergencyTeamModel extends CI_Model
         return $output;
     }
 
-     public function  getall_team_dosh()
-    {
-        $this->db->select('et.et_id,min(dh.dose_history) as dose_history,et.et_name as name');
-        $this->db->from('emergency_team as et');
-        $this->db->join('dose_history as dh','et.et_id = dh.et_id');
-        $this->db->group_by('et.et_name');
-        $query = $this->db->get();
-        if ($query->num_rows() > 0) 
+    public function getTeamIdByMemberIds($memberIds){
+        $this->db->where('id', $memberIds);
+        $this->db->order_by('name', 'ASC');
+        $query = $this->db->get('dose_history');
+        foreach($query->result() as $row)
         {
-           return $query->result_array();
+            $output['id'] = $row->id;
+           
         }
-        else
-        {
-            return FALSE;
-        }
+        return $output;
     }
 
 }
