@@ -67,9 +67,19 @@
                         <h5>Time For 100Ms</h5>
                          <input type="datetime" class="form-control m-input m-input--air"  name="time_10m"  id="time_10m"  placeholder="Time For 10M" value="<?php echo ucfirst($emergencyTask['time_10m'])?>">
                       </div>
+                      <div class="col-md-5"><br>
+                        <span><strong>Team Name</strong></span>
+                         <select name="team_id" id="team_id" class="form-control" onchange="emgTask()">
+                            <option value="">Select Team</option>
+                            <?php 
+                              foreach ($emergencyTeamObj as $key ) {?>
+                              <option <?php if ($key['et_id'] == $emergencyTask['et_id']) echo 'selected' ; ?> value="<?php echo ucfirst($key['et_id'])?>"><?php echo $key['et_name'];?></option>                          
+                           <?php  } ?>
+                          </select>
+                      </div>
 
                 </div><br>
-                           <div class="row">
+<!--                            <div class="row">
                   <div class="col-md-10">
                           <div class="table-repsonsive">
                             <span id="error"></span>
@@ -77,38 +87,25 @@
                             <thead>
                               <tr>
                                <th>Team Name</th>
-                               <!-- <th>Dose History</th> -->
-                              <!--  <th>ET Id</th>  -->                          
-                               <th style="width: 10px;"><button type="button" id="add_row" class="btn btn-success btn-sm addDay"><span class="glyphicon glyphicon-plus"></span></button></th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr id="row_1">                                
                               <td>                                
                                 <select name="member" id="member" class="form-control" onchange="emgTask()">
-
-                                  <option value="">Select Member</option>
-                                 
-                                  <?php 
-                                      foreach ($emergencyTeamObj as $key ) {?>
-                                          <option value="<?php echo $key['et_id'] ?>"><?php echo $key['name']."(". $key['dose_history'].")" ?></option>
-                          
+                                <option value="">Select Team</option>
+                                <?php 
+                                  foreach ($emergencyTeamObj as $key ) {?>
+                                  <option value="<?php echo $key['et_id'] ?>"><?php echo $key['et_name'];?></option>                          
                                <?php  } ?>
                               </select>
-                              </td>
-                           <!--    <td>
-                                <input type="text" name="dose_history" id="dose_history" class="form-control" disabled autocomplete="off">                                
-                              </td>  -->
-                              <td>
-                                <input type="text" name="et_id" id="et_id" class="form-control" disabled autocomplete="off">                                
-                              </td>
-                                                          
+                              </td>                       
                               </tr>
                             </tbody>
                             </table>
                             </div>
                       </div>
-                </div>
+                </div> -->
           <?php } ?>
         </div>
       </div>

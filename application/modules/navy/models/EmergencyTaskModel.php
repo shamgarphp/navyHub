@@ -90,7 +90,8 @@ class EmergencyTaskModel extends CI_Model
     }
 
     public function updateEmergencyTask($emtId){
-        
+      $teamId = $this->input->post('team_id');
+      
         $data = array(
          'area' => $this->input->post("area"),
          'location' => $this->input->post("location"),
@@ -102,7 +103,7 @@ class EmergencyTaskModel extends CI_Model
          'time_10m' => $this->input->post("time_10m"),
          'expected_dose' => $this->input->post("expected_dose"),
          'expection_time' => $this->input->post("expection_time"),
-         'et_id' => $this->input->post('member')
+         'et_id' => $teamId
         );
 
         $this->db->where('id', $emtId);

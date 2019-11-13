@@ -77,8 +77,8 @@
                   <td><?php if(!empty($emergencyTask['expection_time']) && !empty($emergencyTask['expection_time'])) { echo $emergencyTask['expection_time']; } else { echo '---'; }?></td>
                   <td><?php if(!empty($emergencyTask['time_for_micro'])) { echo ucfirst($emergencyTask['time_for_micro']); } else { echo '---'; }?></td>
                   <td><?php if(!empty($emergencyTask['time_10m'])) { echo ucfirst($emergencyTask['time_10m']); } else { echo '---'; }?></td>
-                  <td>
-                     <td><?php if(!empty($emergencyTask['expected_dose'])) { echo ucfirst($emergencyTask['expected_dose']); } else { echo '---'; }?></td>
+                  <td><?php if(!empty($emergencyTask['expected_dose'])) { echo ucfirst($emergencyTask['expected_dose']); } else { echo '---'; }?>
+                  </td>
                   <td>
                     <div class="btn-group">
                       <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Actions
@@ -99,7 +99,7 @@
                           </a>
                         </li> 
                        
-                                               
+                  </td>                            
                 </tr> 
                 <?php }  } else { ?>                                
                 <tr class="odd gradeX">
